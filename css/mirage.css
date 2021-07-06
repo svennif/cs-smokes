@@ -1,0 +1,279 @@
+body {
+  margin: 0px 0px 0px 0px;
+  z-index: -1;
+}
+
+/* backround image for the different sites */
+
+#mirage {
+  background-image: linear-gradient(rgba(86, 93, 102, 0.7), rgba(86, 93, 102, 0.7)), url("../images/mirageBackground.jpg");
+}
+
+#cache {
+  background-image: linear-gradient(rgba(86, 93, 102, 0.7), rgba(86, 93, 102, 0.7)), url("../images/cacheBackground.png");
+}
+
+#overpass {
+  background-image: linear-gradient(rgba(86, 93, 102, 0.7), rgba(86, 93, 102, 0.7)), url("../images/overpassBackground.png");
+}
+
+#nuke {
+  background-image: linear-gradient(rgba(86, 93, 102, 0.7), rgba(86, 93, 102, 0.7)), url("../images/nukeBackground.jpg");
+}
+
+#cobblestone {
+  background-image: linear-gradient(rgba(86, 93, 102, 0.7), rgba(86, 93, 102, 0.7)), url("../images/cobblestoneBackground.jpg");
+}
+
+#inferno {
+  background-image: linear-gradient(rgba(86, 93, 102, 0.7), rgba(86, 93, 102, 0.7)), url("../images/infernoBackground.jpg");
+}
+
+#train {
+  background-image: linear-gradient(rgba(86, 93, 102, 0.7), rgba(86, 93, 102, 0.7)), url("../images/trainBackground.jpg");
+}
+
+/* end of different background images */
+
+#logo {
+  height: 50px;
+  width: auto;
+  margin-left: 5%;
+}
+
+h1 {
+  display: block;
+  font-size: 4em;
+  color: white;
+  z-index: -3;
+  padding-top: 1.5em;
+}
+
+h1 img {
+  width: 120px;
+  height: 120px;
+  margin-top: -55px;
+  float: left;
+}
+
+main {
+  display: block;
+  position: relative;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+}
+
+p {
+  text-align: center;
+  color: white;
+  display: block;
+  -webkit-text-stroke: 1px black;
+  font-size: 38px;
+}
+
+header a,
+p,
+h1 {
+  font-family: "Questrial", sans-serif;
+}
+
+/* The map image */
+
+#mapImage {
+  display: inline-block;
+  position: relative;
+  margin-left: auto;
+  margin-right: auto;
+  height: auto;
+  max-width: 100%;
+  width: 800px;
+  border-width: 3px;
+  border-style: solid;
+  border-color: grey;
+  text-align: center;
+}
+
+map {
+  display: block;
+  position: absolute;
+  width: 100%;
+}
+
+/* footer */
+
+footer {
+  display: block;
+  position: fixed;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  height: 50px;
+  background-color: #3c5978;
+  z-index: 999;
+  opacity: 0.7;
+}
+
+footer a {
+  background-color: #3c5978;
+  border: none;
+  color: white;
+  padding: 15px;
+  text-align: center;
+  text-decoration: none;
+  text-shadow: 2px 1px #000;
+  display: inline-block;
+  cursor: pointer;
+  font-size: 26px;
+  font-family: "Questrial", sans-serif;
+  float: right;
+}
+
+footer a:hover {
+  color: #fff;
+  background-color: #537ba6;
+}
+
+/* hamburger and responsive menu 
+*
+* Thanks to MutedBlues at codepen: https://codepen.io/mutedblues/pen/MmPNPG
+*
+*/
+
+header {
+  background-color: #3c5978;
+  position: absolute;
+  width: 100%;
+  left: 0px;
+  top: 0px;
+  z-index: 3;
+  float: left;
+}
+
+header ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  overflow: hidden;
+  background-color: #3c5978;
+}
+
+header li a {
+  display: block;
+  color: white;
+  padding: 20px 20px;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: 20px;
+  font-family: "Questrial", sans-serif;
+}
+
+header li a:hover,
+header .menu-btn:hover {
+  background-color: #537ba6;
+}
+
+header .logo {
+  display: block;
+  float: left;
+  font-size: 2em;
+  padding: 10px 20px;
+  text-decoration: none;
+}
+
+/* menu */
+
+header ul {
+  clear: both;
+  top: 0;
+  max-height: 0;
+  transition: max-height 0.2s ease-out;
+}
+
+/* thanks to Mutedblues at codepen */
+/* menu icon */
+
+header .menu-icon {
+  cursor: pointer;
+  display: inline-block;
+  float: right;
+  padding: 28px 20px;
+  position: relative;
+  user-select: none;
+}
+
+header .menu-icon .navicon {
+  background: #fff;
+  display: block;
+  height: 2px;
+  position: relative;
+  transition: background 0.2s ease-out;
+  width: 18px;
+}
+
+header .menu-icon .navicon:before,
+header .menu-icon .navicon:after {
+  background: #fff;
+  content: "";
+  display: block;
+  height: 100%;
+  position: absolute;
+  transition: all 0.2s ease-out;
+  width: 100%;
+}
+
+header .menu-icon .navicon:before {
+  top: 5px;
+}
+
+header .menu-icon .navicon:after {
+  top: -5px;
+}
+
+/* menu btn */
+
+header .menu-btn {
+  display: none;
+}
+
+header .menu-btn:checked ~ ul {
+  max-height: 500px;
+}
+
+header .menu-btn:checked ~ .menu-icon .navicon {
+  background: transparent;
+}
+
+header .menu-btn:checked ~ .menu-icon .navicon:before {
+  transform: rotate(-45deg);
+}
+
+header .menu-btn:checked ~ .menu-icon .navicon:after {
+  transform: rotate(45deg);
+}
+
+header .menu-btn:checked ~ .menu-icon:not(.steps) .navicon:before,
+header .menu-btn:checked ~ .menu-icon:not(.steps) .navicon:after {
+  top: 0;
+}
+
+@media (min-width: 1195px) {
+  header li {
+    float: left;
+  }
+  header li a {
+    padding: 20px 30px;
+  }
+  header ul {
+    clear: none;
+    float: right;
+    max-height: none;
+  }
+  header .menu-icon {
+    display: none;
+  }
+}
